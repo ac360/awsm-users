@@ -24,7 +24,7 @@ var validateInput = function(data) {
   return new Promise(function(resolve, reject) {
     resolve(data);
   });
-}
+};
 
 var secureUser = function(user) {
   return new Promise(function(resolve, reject) {
@@ -32,7 +32,7 @@ var secureUser = function(user) {
     user.password = bcryptjs.hashSync(user.password, user.salt);
     resolve(user);
   });
-}
+};
 
 var createUser = function(data) {
   return new Promise(function(resolve, reject) {
